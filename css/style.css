@@ -1,7 +1,3 @@
-html, body, .main {
-    /*height: 100%;*/
-}
-
 *{
     outline: none;
 }
@@ -66,6 +62,7 @@ body{
 
 .multiply{
     position: absolute;
+    background-image: -webkit-linear-gradient(top, #4aa71c, #39930d);
     background-image: linear-gradient(to bottom, #4aa71c, #39930d);
     color: #ffffff;
     padding: 11px 20px;
@@ -85,10 +82,14 @@ body{
     height: 20px;
     right: -9px;
     top: 10px;
+    background-image: -webkit-linear-gradient(38deg, #4aa71c, #39930d);
     background-image: linear-gradient(52deg, #4aa71c, #39930d);
+    -webkit-transform:  rotate(145deg)
+    skewY(-30deg)
+    skewX(-10deg);
     transform:  rotate(145deg)
-                skewY(-30deg)
-                skewX(-10deg);
+    skewY(-30deg)
+    skewX(-10deg);
     background-color: white;
     border: 1px solid #5e9450;
     border-radius: 2px;
@@ -99,6 +100,7 @@ body{
 }
 
 .multiply_matrix:hover .multiply{
+    background-image: -webkit-linear-gradient(top, #3b8c12, #39930d);
     background-image: linear-gradient(to bottom, #3b8c12, #39930d);
     border: 1px solid #527f4d;
     border-bottom: 1px solid #426c36;
@@ -106,6 +108,7 @@ body{
 }
 
 .multiply_matrix:hover .multiply::after{
+    background-image: -webkit-linear-gradient(38deg, #3b8c12, #39930d);
     background-image: linear-gradient(52deg, #3b8c12, #39930d);
     border: 1px solid #527f4d;
     border-bottom: transparent;
@@ -146,6 +149,7 @@ body{
 
 .btn{
     position: relative;
+    background: -webkit-linear-gradient(top, #fdfdfd, #ececec);
     background: linear-gradient(to bottom, #fdfdfd, #ececec);
     padding: 5px 8px;
     border: 1px solid #d9d9d9;
@@ -164,6 +168,7 @@ body{
 }
 
 .btn:hover{
+    background: -webkit-linear-gradient(top, #f1f1f1, #dfdfdf);
     background: linear-gradient(to bottom, #f1f1f1, #dfdfdf);
 }
 
@@ -240,10 +245,12 @@ input[name="matrix_name"]{
     border: 1px solid #d9d9d9;
     border-bottom: #b3b3b3;
     border-radius: 50%;
+    background-image: -webkit-linear-gradient(top, #fbfbfb, #eeeeee);
     background-image: linear-gradient(to bottom, #fbfbfb, #eeeeee);
 }
 
 .radio_block input[type="radio"]+.radio_indicator:hover{
+    background-image: -webkit-linear-gradient(top, #f1f1f1, #e1e1e1);
     background-image: linear-gradient(to bottom, #f1f1f1, #e1e1e1);
     border: 1px solid #d9d9d9;
     border-bottom: #b4b4b4;
@@ -254,6 +261,7 @@ input[name="matrix_name"]{
 }
 
 .radio_block input[type="radio"]:checked{
+    background-image: -webkit-linear-gradient(top, #d8d8d8, #d9d9d9);
     background-image: linear-gradient(to bottom, #d8d8d8, #d9d9d9);
     border: 1px solid #a7a7a7;
     border-bottom: #cacaca;
@@ -318,10 +326,6 @@ input[name="matrix_name"]{
     margin-right: 10px;
 }
 
-.error{
-    color: #da0902;
-}
-
 .action{
     float: left;
     position: relative;
@@ -354,12 +358,10 @@ input[name="matrix_name"]{
 }
 
 .white_block{
-    /*position: absolute;*/
     background-color: #ffffff;
     margin: -5px 5px;
     padding: 5px 0;
 }
-
 
 .matrix_b_block{
     margin-bottom: 20px;
@@ -378,7 +380,6 @@ input {
     height: 40px;
     border: 1px solid #d9d9d9;
     padding: 0;
-    /*padding-bottom: 5px;*/
     text-align: center;
     vertical-align: bottom;
     color: #404040;
@@ -400,4 +401,13 @@ input:focus{
 
 .control_blue{
     background-color: #5199db;
+}
+
+
+.control_red{
+    background-color: #f6c1c0;
+}
+
+.error{
+    color: #da0902;
 }
