@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+    <main class="main clearfix">
+        <!--<div class="container">-->
+        <div class="control">
+            <form name="control_matrix" class="control_matrix">
+                <div class="multiply_matrix" >
+                    <button class="multiply" >Умножить матрицы</button>
+                </div>
+                <button class="btn clear_matrix" >Очистить матрицы</button>
+                <button class="btn change_matrix" >Поменять матрицы местами</button>
+
+                <div class="main_radio_block">
+                    <label class="radio_block">
+                        <input type="radio" name="matrix_name" value="a" checked>Матрица А
+                        <span class="radio_indicator"></span>
+                    </label>
+
+                    <label class="radio_block">
+                        <input type="radio" name="matrix_name" value="b" >Матрица Б
+                        <span class="radio_indicator" ></span>
+                    </label>
+                </div>
+                <div class="row">
+                    <button class="btn btn_add btn_add_row" >Добавить</button>
+                    <button class="btn btn_del btn_del_row">Удалить</button>
+                    <span>Строку</span>
+                </div>
+                <div class="cell">
+                    <button class="btn btn_add btn_add_row">Добавить</button>
+                    <button class="btn btn_del btn_del_cell">Удалить</button>
+                    <span>Столбец</span>
+                </div>
+            </form>
+            <!--<div class="error">
+                <p>Такие матрицы нельзя перемножить, так как количество столбцов матрицы А не равно количеству строк матрицы В.</p>
+            </div>-->
+        </div>
+        <!--</div>-->
+
+        <div class="action">
+            <div class="top_block">
+                <div class="matrix matrix_c_block">
+                    <div class="white_block">
+                        <!--<form class="form_matrix form_matrix_c" >-->
+                            <table class="matrix_c" id="matrix_c">
+                                <tr class="row_input">
+                                    <td><input type="text" placeholder="c1,1" class="matrix_inp_c" disabled></td>
+                                    <td><input type="text" placeholder="c1,2" class="matrix_inp_c" disabled></td>
+                                    <td><input type="text" placeholder="c1,3" class="matrix_inp_c" disabled></td>
+                                </tr>
+                                <tr class="row_input">
+                                    <td><input type="text" placeholder="c2,1" class="matrix_inp_c" disabled></td>
+                                    <td><input type="text" placeholder="c2,2" class="matrix_inp_c" disabled></td>
+                                    <td><input type="text" placeholder="c2,3" class="matrix_inp_c" disabled></td>
+                                </tr>
+                                <tr class="row_input">
+                                    <td><input type="text" placeholder="c3,1" class="matrix_inp_c" disabled></td>
+                                    <td><input type="text" placeholder="c3,2" class="matrix_inp_c" disabled></td>
+                                    <td><input type="text" placeholder="c3,3" class="matrix_inp_c" disabled></td>
+                                </tr>
+                                <tr class="row_input">
+                                    <td><input type="text" placeholder="c4,1" class="matrix_inp_c" disabled></td>
+                                    <td><input type="text" placeholder="c4,2" class="matrix_inp_c"  disabled></td>
+                                    <td><input type="text" placeholder="c4,3" class="matrix_inp_c" disabled></td>
+                                </tr>
+                            </table>
+                        <!--</form>-->
+                    </div>
+                </div>
+
+                <div class="matrix matrix_a_block">
+                    <div class="white_block">
+                        <form class="form_matrix form_matrix_a" name="form_matrix_a">
+                            <table class="matrix_a" id="matrix_a">
+                                <tr class="row_input row_input_a">
+                                    <td><input type="text" class="matrix_inp matrix_inp_a" placeholder="a1,1"></td>
+                                    <td><input type="text" class="matrix_inp matrix_inp_a" placeholder="a1,2"></td>
+                                </tr>
+                                <tr class="row_input row_input_a">
+                                    <td><input type="text" class="matrix_inp matrix_inp_a" placeholder="a2,1"></td>
+                                    <td><input type="text" class="matrix_inp matrix_inp_a" placeholder="a2,2"></td>
+                                </tr>
+                                <tr class="row_input row_input_a">
+                                    <td><input type="text" class="matrix_inp matrix_inp_a"  placeholder="a3,1"></td>
+                                    <td><input type="text" class="matrix_inp matrix_inp_a" placeholder="a3,2"></td>
+                                </tr>
+                                <tr class="row_input row_input_a">
+                                    <td><input type="text" class="matrix_inp matrix_inp_a" placeholder="a4,1"></td>
+                                    <td><input type="text" class="matrix_inp matrix_inp_a" placeholder="a4,2"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <div class="matrix_name name_a">A</div>
+            </div>
+
+            <div class="bottom_block">
+                <div class="matrix matrix_b_block">
+                    <div class="white_block">
+                        <form class="form_matrix form_matrix_b" name="form_matrix_b">
+                            <table class="matrix_b" id="matrix_b">
+                                <tr class="row_input row_input_b">
+                                    <td><input type="text" class="matrix_inp matrix_inp_b" placeholder="b1,1"></td>
+                                    <td><input type="text" class="matrix_inp matrix_inp_b" placeholder="b1,2"></td>
+                                    <td><input type="text" class="matrix_inp matrix_inp_b" placeholder="b1,3"></td>
+                                </tr>
+                                <tr class="row_input row_input_b">
+                                    <td><input type="text" class="matrix_inp matrix_inp_b" id="111" placeholder="b2,1"></td>
+                                    <td><input type="text" class="matrix_inp matrix_inp_b" placeholder="b2,2"></td>
+                                    <td><input type="text" class="matrix_inp matrix_inp_b" placeholder="b2,3"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <div class="matrix_name name_b">B</div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+
+        var block = document.querySelector(".control");
+        var inp = document.querySelectorAll(".matrix_inp");
+
+//голубой фон левого блока при фокусе в матрицах
+        [].forEach.call(inp, function(item) {
+            item.addEventListener("focus", function() {
+                block.classList.add("control_blue");
+            });
+            item.addEventListener("blur", function() {
+                block.classList.remove("control_blue");
+            });
+        });
+
+
+//матрица А = массив
+        var arr_a = document.querySelectorAll(".matrix_inp_a");
+        arr_a = Array.prototype.slice.call(arr_a);
+
+//матрица b = массив
+        var arr_b = document.querySelectorAll(".matrix_inp_b");
+            arr_b = Array.prototype.slice.call(arr_b);
+
+//Очистить матрицы
+        var _clear = document.querySelector(".clear_matrix");
+        _clear.addEventListener("click", function(event) {
+            document.forms["form_matrix_a"].reset();
+            document.forms["form_matrix_b"].reset();
+        });
+
+
+    </script>
+
+</body>
+</html>
